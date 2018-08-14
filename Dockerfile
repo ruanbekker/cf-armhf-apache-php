@@ -4,7 +4,9 @@ RUN apk add --no-cache apache2 \
     apache2-utils php5-apache2 \
     php5-dev php5-openssl \
     php5-mysql php5-curl \
-    php5-common php5-cli
+    php5-common php5-cli \
+    php5-ctype php5-imap \
+    php5-gd php5-zlib php5-zip
 
 RUN mkdir /run/apache2 \
     && sed -i "s/#ServerName/ServerName/g" /etc/apache2/httpd.conf \
